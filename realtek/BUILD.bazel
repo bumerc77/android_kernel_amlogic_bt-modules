@@ -1,0 +1,19 @@
+package(
+    default_visibility = ["//visibility:public"],
+)
+
+exports_files(["Makefile"])
+
+filegroup(
+    name = "realtek_btusb_srcs",
+    srcs = glob(
+        [
+            "rtk_btusb/**",
+        ],
+        exclude = [
+            "**/BUILD.bazel",
+            "**/*.bzl",
+            ".git/**",
+        ],
+    ),
+)
